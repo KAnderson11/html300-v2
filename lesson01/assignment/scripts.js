@@ -41,7 +41,7 @@ document. addEventListener("DOMContentLoaded", function(){
   gumForm.addEventListener('submit', function(event){
   // Prevent the form from trying to submit to a server
      event.preventDefault()	
-    console.log("Submitted!" )
+    console.log("Submitted!")
   
   //Handle input. The website user will input information about how many packs of gum they want to purchase.
   const userInput = document.querySelector('#gum-pack .input').value
@@ -57,3 +57,35 @@ document. addEventListener("DOMContentLoaded", function(){
   })
   
   })
+
+  // Code that requires the DOM be loaded should not be run until the DOM is loaded
+document.addEventListener("DOMContentLoaded", function(){
+
+  // Find the example form, and handle its submit event
+  const scotlandForm = document.querySelector('#scotland-form')
+
+  scotlandForm.addEventListener('submit', function(event){
+    // Prevent the form from trying to submit to a server
+    event.preventDefault()
+    console.log("Submitted!")
+
+       // An array that we we will NOT transform based on user input
+   const array1 = [1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057];
+   
+    //website user will input a year, the user will guess to see if they know one of the years when Macbeth reigned as King
+    const userInput = document.querySelector('#scotland-form .input').value
+    const userNumber = parseInt(userInput)
+    console.log(userNumber)
+
+   
+    //the machine will look inside the array1 to see if the user input is a number that exists inside of the array1
+    const final = console.log(array1.includes(userNumber));
+    const output = document.querySelector('#scotland-form .output')
+    
+        //The machine should return true or false depending if the year that was inputted by the user was found inside of the array1
+        output.innerHTML = `${final}`
+
+})
+
+
+})
