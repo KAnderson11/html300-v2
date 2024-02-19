@@ -89,3 +89,48 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 })
+
+
+  // Code that requires the DOM be loaded should not be run until the DOM is loaded
+  document. addEventListener("DOMContentLoaded", function(){
+
+
+    // Find the my-form, and handle its submit event
+  
+  
+  const myForm = document.querySelector('#my-form')
+  
+  
+  
+  
+    myForm.addEventListener('submit', function(event){
+      // Prevent the form from trying to submit to a server
+      event.preventDefault()
+      console.log("Submitted!")
+  
+  
+       // An array named data that we can NOT transform based on user input
+  const array = [2, 7, 8, 9, 10, 12];  
+    
+   const inputField = document.querySelector('#my-form .input')
+   const userInput = inputField.value
+      
+  
+  //The machine will use the find() function. 
+  //The machine will look inside the array to search for the first item that it can find inside the array which is greater than the input which was inputted by the website user.
+  let found = array.find(function(value){
+      return value > userInput;
+      
+      })
+      console.log(found);
+      const text = document.createTextNode (`${found}`)
+      const p = document.createElement('p')
+      p.appendChild(text)
+      myForm.appendChild(p)
+      myForm.classList.add('submitted')
+  
+  
+  }) 
+
+}) 
+
