@@ -134,3 +134,46 @@ document.addEventListener("DOMContentLoaded", function(){
 
 }) 
 
+
+// Code that requires the DOM be loaded should not be run until the DOM is loaded
+ document. addEventListener("DOMContentLoaded", function(){
+
+
+  // Find the math-form, and handle its submit event
+const mathForm = document.querySelector('#math-form')
+
+
+  mathForm.addEventListener('submit', function(event){
+    // Prevent the form from trying to submit to a server
+    event.preventDefault()
+    console.log("Submitted!")
+
+
+     // An array named data that we can  transform based on user input
+let array = [2, 3, 5, 7];  
+ 
+//The machine will take the input that has been inputted by thw website user and make sure that the input is a type of number instead of type of text
+ const userInput = document.querySelector('#math-form .input').value
+ const userNumber = parseInt(userInput)
+   console.log(userNumber)
+    
+
+//The machine will use the map() function. 
+//Input a number and the machine will add that number to each of these prime numbers inside the array.
+   let array2 = array.map(function(value) {
+    return value + userNumber
+  });
+
+//The machine will display the answers on the website so the answers are visible to the website user
+    console.log(array2);
+    const text = document.createTextNode (`${array2}`)
+    const p = document.createElement('p')
+    p.appendChild(text)
+    mathForm.appendChild(p)
+    mathForm.classList.add('submitted')
+
+
+}) 
+
+
+}) 
