@@ -78,12 +78,23 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log(userNumber)
 
    
-    //the machine will look inside the array1 to see if the user input is a number that exists inside of the array1
-    const final = console.log(array1.includes(userNumber));
-    const output = document.querySelector('#scotland-form .output')
-    
-        //The machine should return true or false depending if the year that was inputted by the user was found inside of the array1
-        output.innerHTML = `${final}`
+    //The machine will look inside the array1 to see if the user input is a number that exists inside of the array1
+     //The machine should return true or false depending if the year that was inputted by the user was found inside of the array1
+    let isInArray = array1.includes(userNumber);
+    // This logs true if the website user has inputted a number that is found inside the array
+    console.log(isInArray);
+
+    // Template literals to have information to display for the output to the screen
+    let answer = `<p>It is <b class="highlight">${isInArray}</b> </p>`;
+
+    // Select the element you want to target. I can use querySelector to find the div element that is class of answer.
+    let answerElement = document.querySelector('div.answer');
+
+//I can place information inside of my HTML element that is class of answer
+    answerElement.innerHTML = answer;
+
+
+
 
 })
 
