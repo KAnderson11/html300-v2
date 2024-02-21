@@ -11,6 +11,9 @@ document. addEventListener("DOMContentLoaded", function(){
     // An array that we can transform based on user input
     let data = [0, 1, 2, 3, 5, 8]
 
+    // Creating a variable named inputField and then using querySelector to have the machine get the form that has been assigned an id of example-form and the item that is class of input from that form. That particular form has been assigned an id. The form id is example-form.
+    // Creating a variable named userInput to hold the information. The machine will find the value from the variable named inputField?? We know that the inputField is the item that is class of input which is being entered by our website user into that form that has an id of example-form.
+    // Creating a variable named userNumber to hold the value of the input that has been provdied by the website user. The parseInt() will return an integer. We want our input to be type of number and not have the input be a string that is type of text.
     const inputField = document.querySelector('#example-form .input')
     const userInput = inputField.value
     const userNumber = parseInt(userInput)
@@ -44,15 +47,19 @@ document. addEventListener("DOMContentLoaded", function(){
     console.log("Submitted!")
   
   //Handle input. The website user will input information about how many packs of gum they want to purchase.
+  //Create a variable named userInput then use querySelector to find the form with an id of gum-pack and find the item with a class of input. We want the value of that particular item. 
+  //Create a variable named userNumber to hold the website user input. The parseInt() will return an integer. We want our input from the website user to be type of number and not have the input be a string that is type of text.
   const userInput = document.querySelector('#gum-pack .input').value
   const userNumber = parseInt(userInput)
     console.log(userNumber)
   
   
   //Handle output
+  //Create variable named output. Then use the querySelector fo find the form which has an id of gum-pack and find the item which has been assigned a class of output
   const output = document.querySelector('#gum-pack .output')
   
   //Output to the webpage. The machine will calculate the total amount owed by multiplying the input information of the number of gum packs by the 3 dollar per pack price. Then the machine will display the total amount owed.
+  //The machine will place the information inside the item that has a class of output.
   output.innerHTML = `${userNumber * 3} Dollars US is the total amount owed`
   })
   
@@ -90,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // Select the element you want to target. I can use querySelector to find the div element that is class of answer.
     let answerElement = document.querySelector('div.answer');
 
-//I can place information inside of my HTML element that is class of answer
+//I can place information inside of my HTML element that has been assigned a class of answer
     answerElement.innerHTML = answer;
 
 
