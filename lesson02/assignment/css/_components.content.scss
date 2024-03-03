@@ -8,38 +8,103 @@ html {
     box-sizing: inherit;
 }
 
+.main {
+    padding: 2rem;
+}
+
 .container{
     height:auto;
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content:left;
-    align-items:center;
-    margin-left: 2em;
-    margin-right: 2em;
+
+    justify-content:start;
+    align-items:start;
     margin-top: 0.5em;
-    margin-bottom:0.5em
-    border:3em solid $steel;
-
-}
-//@media insert a media query here?
-
-.main {
-    padding: 2rem;
+    margin-right: 2em;
+    margin-bottom:0.5em;   
 }
 
-.flex-box{
+.flex-box1{
+    height:auto;
+    width:100%;
     display:flex;
     flex-direction: row;
+    background-color: $white;
+    margin-top: 0.5em;
+    margin-right: 2em;
+    margin-bottom:0.5em;  
+    border:3em solid $steel;
+  
+}
+.flex-box2{
     height:auto;
-    width:40%;
+    width:20%;
     border: none;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-bottom:0.5em;  
+}
+.container{
+    height:auto;
+    display:flex;
+    flex-direction: row;
+    justify-content:start;
+    align-items:start;
+    margin-top: 0.5em;
+    margin-right: 2em;
+    margin-bottom:0.5em;   
 }
 
-div {
-    display:block;
-
+.flex-box3{
+    height:auto;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    border: solid $blue 1px;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-bottom:0.5em; 
+    background-color: $white;
+    
 }
+
+.mini-container{
+    height:auto;
+    display:flex;
+    flex-wrap:wrap;
+    width: 70%;
+    margin: 1em 1em 1em 1em;
+    background-color:$gray;
+}
+
+
+.flex-box4{
+    height:5em;
+    width:30%;
+    border: solid $red 1px;
+  
+    
+}
+
+.flex-box5{
+    height:5em;
+    width:30%;
+    border: solid $green 1px;
+  
+    
+}
+.flex-box6{
+    height:3em;
+    width:40%;
+    border: solid $black 1px;
+  
+    
+}
+
 
 
 h1 {
@@ -50,8 +115,7 @@ h1 {
     height:$height;
 }
 
-.square {@include size (30em);
-background: $gray;}
+//.square {@include size (30em);background: $gray;}
 
 p{
     color:$steel;
