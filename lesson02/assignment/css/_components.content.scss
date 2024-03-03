@@ -8,9 +8,39 @@ html {
     box-sizing: inherit;
 }
 
+.container{
+    height:auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:left;
+    align-items:center;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 0.5em;
+    margin-bottom:0.5em
+    border:3em solid $steel;
+
+}
+//@media insert a media query here?
+
 .main {
     padding: 2rem;
 }
+
+.flex-box{
+    display:flex;
+    flex-direction: row;
+    height:auto;
+    width:40%;
+    border: none;
+}
+
+div {
+    display:block;
+
+}
+
 
 h1 {
     color: $steel;
@@ -20,9 +50,17 @@ h1 {
     height:$height;
 }
 
-.square {@include size (500px);
+.square {@include size (30em);
 background: $gray;}
 
 p{
     color:$steel;
+}
+
+@mixin important-text {
+    font-weight: bold;
+}
+
+.social-media{
+    @include important-text;
 }
