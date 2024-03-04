@@ -133,3 +133,25 @@ h4{
 p { 
     color:$steel;
 }
+
+
+@media screen and (max-width: 767px) {
+    .flex-box1 {
+      height:90em; 
+      width:80em; 
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin-left:2em
+    }
+    
+  
+    .flex-box2 {
+        width:20.5em;
+      }
+    .flex-box3 {
+        width:20.5em;
+      }
+
+
+  }
+
