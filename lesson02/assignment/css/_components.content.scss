@@ -12,6 +12,8 @@ html {
     padding: 2rem;
 }
 
+
+
 .container{
     height:auto;
     display:flex;
@@ -58,7 +60,7 @@ html {
 }
 
 .flex-box3{
-    height:auto;
+    height:25em;
     width:100%;
     display:flex;
     flex-direction:row;
@@ -75,35 +77,24 @@ html {
 .mini-container{
     height:auto;
     display:flex;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     width: 70%;
     margin: 1em 1em 1em 1em;
     background-color:$gray;
 }
 
 
-.flex-box4{
-    height:5em;
-    width:30%;
+.flex-box-title{
+    height:3em;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
     border: solid $red 1px;
   
     
 }
 
-.flex-box5{
-    height:5em;
-    width:30%;
-    border: solid $green 1px;
-  
-    
-}
-.flex-box6{
-    height:3em;
-    width:40%;
-    border: solid $black 1px;
-  
-    
-}
 
 
 
@@ -115,10 +106,12 @@ h1 {
     height:$height;
 }
 
-//.square {@include size (30em);background: $gray;}
+//.square {@include size (30em);background: $gray;}??Use flexbox instead with background color.
 
-p{
+
+h4{
     color:$steel;
+
 }
 
 @mixin important-text {
@@ -127,4 +120,16 @@ p{
 
 .social-media{
     @include important-text;
+}
+
+@mixin tilt-text {
+    font-style:italic;
+    font-weight:normal;
+}
+
+.slant-text{
+    @include tilt-text;
+}
+p { 
+    color:$steel;
 }
