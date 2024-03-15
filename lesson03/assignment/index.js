@@ -5,7 +5,8 @@ const people = JSON.parse(peopleJSON)
 // Loop through all elements of the list. Use a .forEach( ) function
 people.forEach(function(el){
     let list = document.createElement('div')
-      // Build HTML and use template literals ${ }
+      // Build HTML and use template literals ${ } and string interpolation? 
+       // Insert innerHTML into page
     list.innerHTML =`  
     <div class=flex-box1>
     <div class ="flex-box2"> 
@@ -56,7 +57,7 @@ people.forEach(function(el){
  const container = document.querySelector('#list-container')
  container.append(list)
 })
- // Insert HTML into page
+
 
 
 
