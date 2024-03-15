@@ -2,22 +2,61 @@ const peopleJSON = '[{"name":"Paolo Maldini","jobTitle":"Front End Developer","c
 
 const people = JSON.parse(peopleJSON)
 
+// Loop through all elements of the list. Use a .forEach( ) function
 people.forEach(function(el){
-    let list = document.createElement('p')
-    list.innerHTML =`
-    <div>${el.name}</div>
-    <div>${el.jobTitle}</div>
-    <div> Company: ${el.company}</div>
-    <div> Experience: ${el.experience}</div>
-    <div> School: ${el.school}</div>
-    <div> Major: ${el.major}</div>
-    <div> Email: ${el.email}</div>
-    <div>${el.linkedInUrl}</div>
+    let list = document.createElement('div')
+      // Build HTML and use template literals ${ }
+    list.innerHTML =`  
+    <div class=flex-box1>
+    <div class ="flex-box2"> 
+        <div class="static-block">
+            <img class="round" src="img/headshot.jpg" alt=" "  height="200em">
+            <h1 class="static-block__title">${el.name}</h1>
+            <h2 class="slant-text">${el.jobTitle}</h2>
+   
+        </div>
+        </div>
+        <div class ="flex-box3">
+          
+        <div class ="mini-container">
+            <div class="static-block__content">
+            <div class ="flex-box-title">
+           
+                <h4 >Company:
+                </h4>
+                <p class="static-block__copy"> ${el.company}</p>
+                
+             </div>     
+             <div class=flex-box-title>
+                
+                <h4 >Experience:
+                </h4>
+                <p class="static-block__copy">${el.experience}</p>
+               </div> 
+               <div class=flex-box-title>
+                <h4 >School:
+                </h4>
+                <p class="static-block__copy"> ${el.school}</p>
+               </div>
+             
+               
+               <div class=flex-box-title>  
+                <h4>Major:</h4>
+                <p class="static-block__copy">  ${el.major}</p>
+               </div>
+               <div class=flex-box-title>  
+                <h4>Email:</h4>
+                <p class="static-block__copy">${el.email}</p>
+               </div>
+               <div class=flex-box-title>  
+                <img src="img/linkedin.svg " alt="" class="static-block__img" height="30px">
+                <h4 class="social-media">${el.linkedInUrl}</h4>
  `
+
  const container = document.querySelector('#list-container')
  container.append(list)
 })
-
+ // Insert HTML into page
 
 
 
