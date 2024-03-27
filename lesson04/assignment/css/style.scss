@@ -62,42 +62,50 @@ li:hover > .menu-1 > li {
  
   
   .orange-box {
-    width: 300px;
-    height: 150px;
-    padding: 20px 40px;
+    width: 15rem;
+    height: 7rem;
+    padding: 10rem 20rem;
     background:#fc6203;
-    transition: 
-      //* step 1 *//
-      width: 1s;
-      //* step 2 *//
-      background: 0.5s, 1s;
+    transition: width 2s;
   }
+  
 
   //All HTML items that have been assigned a class of orange-box will be styled. The item will be the color organe.
   //The animation will occur when the website user hovers their computer mouse over the item. The item will expand horizontally so it becomes wider.
   //Then the item will change from an organge color to white and will also display a black inner border.
+  // I made the transition be 2 seconds for the width. The transition will control the speed of the transform, this way it is easier for the computer user to see the change occur at this slightly slower pace.
   
   .orange-box:hover {
-    width: 400px;
+    width: 30em;
     background: white;
     -webkit-box-shadow: inset 0 0 0 10px black;
     -moz-box-shadow: inset 0 0 0 10px black;
     box-shadow: inset 0 0 0 10px black;
   }
+
+
   
   @mixin important-text {
-    font-weight:bold;
+    color: grey;
+    font-size: 25px;
+    font-weight: bold;
+    border: 0.5em solid $royalblue;
   }
-
-  .headline{
+  .headline {
     @include important-text;
   }
   
 
+//Credited sources :https://codepen.io/akatz6/pen/QPRPRj?editors=1100
+
+//The UWStartLearning animation example from Lesson 4
+
+//https://codepen.io/team/css-tricks/pen/mVJKgO gets wider and changes the color of the shape, red box changes color.
+
+//https://codepen.io/aDevildog/pen/mdOqWR pink rectangles, has an inner border example.
 
 
 
 
 
 
-  
