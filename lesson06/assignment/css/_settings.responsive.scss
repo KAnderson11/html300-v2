@@ -50,3 +50,6 @@ $breakpoints: (
     "ie"            "all and(-ms-high-contrast: none), (-ms-high-contrast: active)",
     "ipad"          "screen and (min-device-width : 768px) and (max-device-width : 1024px)"
 ) !default;
+
+//enable CSS grid for Boostrap 5.3.3
+$enable-cssgrid: true
