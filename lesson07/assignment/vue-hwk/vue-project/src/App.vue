@@ -9,6 +9,8 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/birders">Education</RouterLink>
+        <RouterLink to="/birdwalk">Participate</RouterLink>
+        <RouterLink to="/faq">FAQ</RouterLink>
       </nav>
       <RouterView />  
     <button type="button" name="button" v-on:click="increase">Button One Click Me</button>
