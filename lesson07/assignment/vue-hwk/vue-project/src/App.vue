@@ -1,9 +1,19 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+export default {
+  name:'app',
+  data() {
+  return{
+    message:'Tahoma Bird Alliance',
+    text: 'Bird walk registration is open'
+  }
+ }
+}
 </script>
 
+
 <template>
+  <h1>{{ message }}</h1>
+  <h4>{{ text }}</h4>
   <div id="app"> 
     <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -17,10 +27,20 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
     <div>
     <p>FILLER TEXT lorem ipsum</p>
+    <p v-if="text.includes('open')">Register now</p>
+    <!--The text includes the word 'open' then we know that bird walk registration is open-->
+    <p v-else> Registration is closed</p>
+     <!--The word 'open' is not found in the text then we know that bird walk registration is NOT open thus the registration is closed-->
     </div>
    <div>
       <button type="button" name="button" v-on:click="show = !show">ButtonTwo Submit</button>
+
+
 </div>
+
+
+
+
 
   <!-- <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
