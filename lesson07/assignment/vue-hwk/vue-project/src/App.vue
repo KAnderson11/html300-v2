@@ -10,7 +10,7 @@ export default {
     text: 'Bird walk registration is open',
     manyBirds: [
         'some filler text',
-        'more text and more text',
+        'more filler text',
       ]
   }
  }
