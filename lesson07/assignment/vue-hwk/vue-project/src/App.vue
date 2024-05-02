@@ -1,17 +1,32 @@
 <script>
+import Img1 from './assets/images/small-logo.png'
+import Img2 from './assets/images/heron.png'
 export default {
   name:'app',
   data() {
   return{
+    images: [Img1,Img2],
     message:'Tahoma Bird Alliance',
-    text: 'Bird walk registration is open'
+    text: 'Bird walk registration is open',
+    manyBirds: [
+        'some filler text',
+        'more text and more text',
+      ]
   }
  }
 }
+
+
 </script>
 
-
 <template>
+   <div>
+        <div class="image-container">
+          <div class="image" v-for = "image in images" :key="image">
+            <img :src="image">
+          </div>
+        </div>
+      </div>
   <h1>{{ message }}</h1>
   <h4>{{ text }}</h4>
   <div id="app"> 
@@ -23,20 +38,25 @@ export default {
         <RouterLink to="/faq">FAQ</RouterLink>
       </nav>
       <RouterView />  
-    <button type="button" name="button" v-on:click="increase">Button One Click Me</button>
+    
+
+    <!-- <button type="button" name="button" v-on:click="increase">Button One Click Me</button>
     </div>
     <div>
-    <p>FILLER TEXT lorem ipsum</p>
-    <p v-if="text.includes('open')">Register now</p>
+    <p>FILLER TEXT lorem ipsum</p> 
+     <div>
+      <button type="button" name="button" v-on:click="show = !show">ButtonTwo Submit</button> -->
+</div>
+<div>
+    <p v-if="text.includes('open')">Register now</p> 
     <!--The text includes the word 'open' then we know that bird walk registration is open-->
     <p v-else> Registration is closed</p>
      <!--The word 'open' is not found in the text then we know that bird walk registration is NOT open thus the registration is closed-->
     </div>
-   <div>
-      <button type="button" name="button" v-on:click="show = !show">ButtonTwo Submit</button>
 
-
-</div>
+<ol>
+    <li v-for="x in manyBirds">{{ x }}</li>
+</ol>
 
 
 
