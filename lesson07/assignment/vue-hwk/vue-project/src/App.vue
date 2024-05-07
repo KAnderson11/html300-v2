@@ -22,7 +22,7 @@ export default {
 <template>
    <div>
         <div class="image-container">
-          <div class="image" v-for = "image in images" :key="image">
+          <div class="image" v-for = "(image,index) in images" :key="index">
             <img :src="image">
           </div>
         </div>
