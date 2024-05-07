@@ -29,27 +29,28 @@ export default {
 
 
 
-                          <!-- Bootstrap accordion 2 --> 
-            <div class="accordion" id="accordionExample2">
-                <div class="accordion-item" v-for="(item,index) in items" :key="index">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse'+index" aria-expanded="true" :aria-controls="'collapse'+index">
-                      {{ item.question }}
-                        <!-- The question information will be visible when the accordion is collapsed or expanded --> 
-                    </button>
-                  </h2>
-                  <div :id="'collapse'+index" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
-                    <div class="accordion-body">
-                      {{ item.answer }}
-                    <!-- The answer information will only become visible when the accordion expanded --> 
-                    </div>
-                  </div>
-                </div>
-
-                
-              </div>
-       
-              
-          
-        </main>
-</template>
+<!--
+ Bootstrap accordion 2 -->
+ <div class="accordion" id="accordionExample2">
+               <div class="accordion-item" v-for="(item,index) in items" :key="index">
+                 <h2 class="accordion-header">
+                   <button class="accordion-button"type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse'+index" aria-expanded="true":aria-controls="'collapse'+index">
+                     {{item.question}}
+                       <!--
+ The question information will be visible when the accordion is collapsed or expanded -->
+                   </button>
+                 </h2>
+                 <!--
+ I removed the show class from each of these divs and only added it back for the first item index==0 -->
+                 <div :id="'collapse'+index" class="accordion-collapse collapse" :class="{'show':index==0}" data-bs-parent="#accordionExample2">
+                   <div class="accordion-body">
+                     {{item.answer}}
+                   <!--
+ The answer information will only become visible when the accordion expanded -->
+                   </div>
+                 </div>
+               </div>
+    
+           </div>
+    </main>
+    </template>
