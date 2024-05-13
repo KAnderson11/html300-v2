@@ -1,7 +1,9 @@
 <script>
+import BaseLayout from './components/BaseLayout.vue'
 import Img1 from './assets/images/small-logo.png'
 import Img2 from './assets/images/heron.png'
 export default {
+  components: {BaseLayout},
   name:'app',
   data() {
   return{
@@ -20,13 +22,21 @@ export default {
 </script>
 
 <template>
-   <div>
+  <div>
+
+  <BaseLayout>
+    <template #header>
+      <h1>Text Needed for header</h1>
+    </template>
+  </BaseLayout>
+  </div>
+
         <div class="image-container">
           <div class="image" v-for = "(image,index) in images" :key="index">
             <img :src="image">
           </div>
         </div>
-      </div>
+      
   <h1>{{ message }}</h1>
   <h4>{{ text }}</h4>
   <div id="app"> 

@@ -27,15 +27,18 @@ methods:{
 
 
 <template>
+
+    <div>
       <div class="alert-box"v-show="ok">
     <strong>Click the toggle button </strong>
 	
   <button @click="ok = !ok">toggle</button>
 
-
+	<h1 v-show="ok">Hello!</h1>
 	
-<br>
+
     <br/>
+   
   
  <div>
    <img
@@ -44,10 +47,14 @@ methods:{
  :title="alttext">
    <caption>This is an image</caption>
  </div>
+ </div>
 </div>
 </template>
 
 <style scoped>
+
+
+
 .alert-box {
   color: #666;
   border: 1px solid black;
