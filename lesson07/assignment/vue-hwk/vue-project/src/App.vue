@@ -1,9 +1,9 @@
 <script>
-import BaseLayout from './components/BaseLayout.vue'
+import HeaderLayout from './components/HeaderLayout.vue'
 import Img1 from './assets/images/small-logo.png'
 import Img2 from './assets/images/heron.png'
 export default {
-  components: {BaseLayout},
+  components: {HeaderLayout},
   name:'app',
   data() {
   return{
@@ -24,11 +24,11 @@ export default {
 <template>
   <div>
 
-  <BaseLayout>
+  <HeaderLayout>
     <template #header>
       <h1>Text Needed for header</h1>
     </template>
-  </BaseLayout>
+  </HeaderLayout>
   </div>
 
         <div class="image-container">
