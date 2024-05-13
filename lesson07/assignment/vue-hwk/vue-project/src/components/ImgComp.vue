@@ -14,7 +14,7 @@ String
  data()
  {
  return{
-   
+   ok:true
  }
 },
 methods:{
@@ -27,6 +27,16 @@ methods:{
 
 
 <template>
+      <div class="alert-box"v-show="ok">
+    <strong>Click the toggle button </strong>
+	
+  <button @click="ok = !ok">toggle</button>
+
+
+	
+<br>
+    <br/>
+  
  <div>
    <img
  :src="imagepath"
@@ -34,4 +44,15 @@ methods:{
  :title="alttext">
    <caption>This is an image</caption>
  </div>
+</div>
 </template>
+
+<style scoped>
+.alert-box {
+  color: #666;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+</style>
