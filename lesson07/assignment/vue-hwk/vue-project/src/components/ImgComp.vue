@@ -52,7 +52,7 @@ methods:{
 </div>
 </template>
 
-<style>
+<style scoped>
 img{
 border:2px solid transparent;
 
