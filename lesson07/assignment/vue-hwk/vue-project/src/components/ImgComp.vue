@@ -6,19 +6,22 @@ default {
  name:'ImgComp',
  props:{
 // I had the wrong syntax here with the [] instead of {}.  I also validated the types as String
-   imagepath:
-String,
-   alttext:
-String
+   imagepath: String, alttext: String
  },
  data()
  {
  return{
-   ok:true
+   ok:true,
+
+   showBorder:false
  }
 },
 methods:{
    //can put toggle here
+
+   toggleBorder(){
+    this.showBorder=!this.showBorder
+   }
 }
 }
 
@@ -31,35 +34,33 @@ methods:{
     <div>
       <div class="alert-box"v-show="ok">
     <strong>Click the toggle button </strong>
-	
-  <button @click="ok = !ok">toggle</button>
+    <button @click="toggleBorder()">toggle</button>
+    <h1>Hello! Some text here</h1>
 
-	<h1 v-show="ok">Hello!</h1>
-	
 
-    <br/>
-   
   
  <div>
    <img
  :src="imagepath"
  :alt="alttext"
- :title="alttext">
+ :title="alttext"
+ :class="{ imageBorder:showBorder}"
+ />
    <caption>This is an image</caption>
  </div>
  </div>
 </div>
 </template>
 
-<style scoped>
+<style>
+img{
+border:2px solid transparent;
 
-
-
-.alert-box {
-  color: #666;
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 20px;
-  background-color: #f8f8f8;
+/* Prevents jump when the order is added */
 }
+
+.imageBorder{
+border:2px solid red;
+}
+
 </style>
