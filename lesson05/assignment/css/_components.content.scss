@@ -10,4 +10,113 @@ html {
 
 .main {
     padding: 2rem;
+    color:white;
 }
+
+.header {
+    display: grid;
+    grid-template-columns:repeat(autofit, minmax(250px, 1fr)); /* should create columns, and anything else takes remaining free space */
+    justify-items:center; /*Aligns content in a grid item along the row axis.*/
+    align-items: center; /* Vertically center content */
+    background-color: red;
+    color: #fff;
+    padding: 6rem;
+  
+}
+
+/*Maybe use auto-fit later on or make other changes to navigation bar to make it more responsive for small screens. Maybe use @mediaquery for smaller screens*/
+.nav {
+    background: #39FF14;
+    display:grid;
+    justify-content: space-evenly;/*Justifies all grid content on row axis when total grid size is smaller than container.*/
+    align-items:center;
+    padding: 0.7rem 0.7rem;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    &-wrap {
+             max-width: 1920px;
+  }
+  &_list {
+      padding: 0;
+      width:100%;/* The navigation_list should go horizontally across 100% of the navigation horizontal bar*/
+      margin: 0 auto;
+      list-style:none;
+      text-align: center;
+  }
+  &_item {
+      display:inline-block;
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      margin-right:16rem; /* Creates more spacing by increasing the margin-right on each navigation_item*/
+      &:last-of-type{
+          margin: 0.5rem;
+      }
+  }
+  &_link {
+      color: white; /* The navigation links will be white*/
+    }
+  }
+  
+/* Inside the flexbox-container are multiple flexboxes*/
+.flex-container {
+  display:flex;
+  height:30rem;
+  width:100%;
+  background-color:pink;
+  flex-wrap:no-wrap;
+}
+/* Inside the flexbox-left is my sidebar navigation menu*/
+.flexbox-left{
+  width:20%;
+  height:30rem;
+  background-color:purple;
+  flex-wrap:no-wrap;
+}
+/* Inside the flexbox-right is main content */
+.flexbox-right{
+  width:90%;
+  height:30rem;
+  background-color:orange;
+  flex-wrap:no-wrap;
+}
+
+
+/* The sidebar menu */
+.sidenav {
+  height: 30rem; /* Full-height: remove this if you want "auto" height */
+  width: 10rem; /* Set the width of the sidebar */
+  position: sticky; /* Fixed Sidebar (stays in place when page user is scrolling) */
+  z-index: 1; /* Stay on top */
+  top: 1; /* Stay at the top */
+  left: 0;
+  background-color: purple; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 1rem;
+  color:white; /*text color should be set to white as the color*/
+&_text {
+    padding: 2rem;
+    margin: 0 auto;
+    list-style:none;
+    text-align: center; /*text will be centered inside my sidenav*/
+}
+}
+.main {
+  height:4rem;
+  margin-left: 1rem; 
+  padding: 2rem 1rem;
+   background-color: none;
+ 
+}
+
+
+.footer {
+    display: grid;
+    grid-template-columns: auto; /* auto width */
+    justify-items:center; /*Aligns content in a grid item along the row axis. */
+    align-items: center; /* Vertically center content */
+    background-color: blue;
+    color: #fff;
+    padding: 1rem;
+}
+
+  
